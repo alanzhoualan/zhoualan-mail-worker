@@ -70,7 +70,7 @@ export default {
         } else {
           const resBody = await response.text();
           return new Response(JSON.stringify({ error: "Failed to send code via backend mailer", details: resBody }), {
-            status: 502,
+            status: 500,
             headers: { "Content-Type": "application/json; charset=utf-8" }
           });
         }
